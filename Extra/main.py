@@ -1,6 +1,7 @@
 import sqlite3
 from datetime import datetime
 import random
+import time
 
 class User():
     def __init__(self, name: str, year: int):
