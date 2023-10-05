@@ -36,3 +36,11 @@
 
 <p>8 - Quais os benefícios de usar um sistema de banco de dados para uma empresa ?</p>
 <p>R. Ele são otimos para monitora e melhorar a eficiência de um banco de dados</p>
+
+<hr/>
+
+<p>9 - Todo o sistema será compremetido tais como dados e informaçoes</p>
+
+<hr/>
+
+<p>10 - Acontecem por elas não terem custos para manter essa modalidade mesmo sendo benefica</p>
