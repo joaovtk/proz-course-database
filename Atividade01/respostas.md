@@ -10,7 +10,7 @@
 <hr/>
 
 <p>3 - Comente por que é importante a efiêcienca dos sistemas atualmente</p>
-<p>R. Pois é extremamente importante terem sistemas rapidos, simples para fazer manutenção para evitar problemas futuros</p>
+<p>R. Pois assim teremos sistemas mais rapidos e simples para fazer manutenção para evitar problemas futuros</p>
 
 <hr/>
 
@@ -30,7 +30,7 @@
 <hr/>
 
 <p>7 - O que é um SGDB ou Sistema Gerenciado de Banco de Dados e qual é a sua melhoraria ?</p>
-<p>R. São sistemas que auxiliam e ajudam a gerenciar os complexos banco de dados, O SGDB é centralizado e toda sua funcionalidade , execução de programas aplications e processamentos de interface do usuario eram executados na mesma maquina</p>
+<p>R. São sistemas que auxiliam e ajudam a gerenciar os complexos banco de dados, O SGDB é centralizado e toda sua funcionalidade , execução de programas aplications e processamentos de interface do usuario eram executados na mesma maquina o que possibilita mais organização e eficiência</p>
 
 <hr/>
 
