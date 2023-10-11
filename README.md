@@ -1,6 +1,3 @@
-# proz-course-database
-Materia de banco de dados envolvendo mysql/mariadb e python
-
-<hr/>
+# Atividades de disciplina de banco de dados da proz 2023/2024
 
 - [x] Aula sobre sql (pratica)<br>
