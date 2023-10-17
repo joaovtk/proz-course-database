@@ -20,3 +20,4 @@
     - R. O comando é DROP VIEW nome_da_view<br/>
 - 10 - Como alterar uma view ?<br/>
     - R. Através do comando ALTER VIEW<br/>
+    
