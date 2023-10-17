@@ -2,6 +2,7 @@
 
 - [x] Aula sobre sql (pratica)<br>
 - [x] DML (pratica)<br/>
+- [x] Comecando o extra/AgendaContatos<br/>
 
 # Sobre o Extra 
 <p>O extra ou atividades free time no ultimo repositorio são atividades que eu faço extra curriculares no meu tempo livre é claro que envolve ou não a materia</p>
