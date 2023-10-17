@@ -1,7 +1,6 @@
 DROP DATABASE BDEscolar;
 CREATE DATABASE IF NOT EXISTS BDEscolar;
 USE BDEscolar;
-
 CREATE TABLE Professores (
     ID INT AUTO_INCREMENT PRIMARY KEY,
     Nome VARCHAR(50) NOT NULL
@@ -34,26 +33,21 @@ CREATE TABLE UnidadesEscolares (
     NomeUnidade VARCHAR(50) NOT NULL,
     Endereco VARCHAR(100)
 );
+INSERT INTO Professores VALUES (1, "Gleison");
+INSERT INTO Turmas VALUES (1, "Turma Ab1", 1);
+INSERT INTO Turmas VALUES (2, "Turma Ac1", 1);
+INSERT INTO Alunos VALUES (1, "João Vitor", "2005-10-04", 1);
+INSERT INTO Alunos (Nome) VALUES ("Gabriel");
 
--- Exemplos de inserções
-INSERT INTO Professores (Nome) VALUES ('Enzo');
-INSERT INTO Turmas (NomeTurma, ProfessorID) VALUES ('Turma A', 1);
-INSERT INTO Disciplinas (NomeDisciplina, TurmaID) VALUES ('Matemática', 1);
--- Exemplo de consulta
--- Obter todos os alunos na Turma A e suas disciplinas
-SELECT Alunos.Nome, Disciplinas.NomeDisciplina
-FROM Alunos
-JOIN Turmas ON Alunos.TurmaID = Turmas.ID
-JOIN Disciplinas ON Turmas.ID = Disciplinas.TurmaID
-WHERE Turmas.NomeTurma = 'Turma A';
 
--- Exemplo de atualização
--- Atualizar o nome de um aluno
-UPDATE Alunos
-SET Nome = 'Novo Nome'
-WHERE ID = 1;
+SELECT * FROM Alunos WHERE id = 1;
+SELECT TurmaID FROM Alunos WHERE nome = "João Vitor";
+SELECT * FROM Alunos;
 
--- Exemplo de exclusão
--- Excluir um aluno
-DELETE FROM Alunos
-WHERE ID = 1;
+UPDATE Alunos SET DataNascimento = "2006-05-05" WHERE ID = 2;
+UPDATE Alunos SET TurmaID = 2 WHERE id = 2;
+UPDATE Alunos SET TurmaID = 2 WHERE id = 1;
+
+DELETE FROM Alunos WHERE id = 2;
+	
+
