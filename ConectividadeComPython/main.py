@@ -138,10 +138,9 @@ if __name__ == "__main__":
             disciplina_id = int(input("ID da Disciplina: "))
             Disciplina.remover(disciplina_id)
             print("Disciplina removida com sucesso!")
-
         elif opcao == "17":
             nome_unidade = input("Nome da Unidade Escolar: ")
-            endereco = input("Endereço da Unidade Escolar: ")
+            endereco = input("CEP da Unidade Escolar: ")
             unidade = UnidadeEscolar(nome_unidade, endereco)
             unidade.salvar()
             print("Unidade Escolar cadastrada com sucesso!")
@@ -153,15 +152,14 @@ if __name__ == "__main__":
         elif opcao == "19":
             unidade_id = int(input("ID da Unidade Escolar: "))
             novo_nome = input("Novo Nome da Unidade Escolar: ")
-            novo_endereco = input("Novo Endereço da Unidade Escolar: ")
-            UnidadeEscolar.alterar(unidade_id, novo_nome, novo_endereco)
-            print("Nome e Endereço da Unidade Escolar alterados com sucesso!")
+            novo_cep = input("Novo CEP da Unidade Escolar: ")
+            UnidadeEscolar.alterar(unidade_id, novo_nome, novo_cep)
+            print("Nome e CEP da unidade escolar alterado com sucesso alterados com sucesso!")
 
         elif opcao == "20":
             unidade_id = int(input("ID da Unidade Escolar: "))
             UnidadeEscolar.remover(unidade_id)
             print("Unidade Escolar removida com sucesso!")
-
         elif opcao == "0":
             break
 

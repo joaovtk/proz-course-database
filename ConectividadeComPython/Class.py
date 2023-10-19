@@ -156,13 +156,13 @@ class Disciplina:
 
 # Classe Unidade Escolar (semelhante ao Aluno)
 class UnidadeEscolar:
-    def __init__(self, nome_unidade, endereco):
+    def __init__(self, nome_unidade, cep):
         self.nome_unidade = nome_unidade
-        self.endereco = endereco
+        self.cep = cep
 
     def salvar(self):
-        query = "INSERT INTO UnidadesEscolares (NomeUnidade, Endereco) VALUES (%s, %s)"
-        values = (self.nome_unidade, self.endereco)
+        query = "INSERT INTO UnidadesEscolares (NomeUnidade, Cep) VALUES (%s, %s)"
+        values = (self.nome_unidade, self.cep)
         cursor.execute(query, values)
         db.commit()
 
@@ -172,12 +172,12 @@ class UnidadeEscolar:
         cursor.execute(query)
         result = cursor.fetchall()
         for unidade in result:
-            print(f"ID: {unidade[0]}, Nome da Unidade: {unidade[1]}, Endereço: {unidade[2]}")
+            print(f"ID: {unidade[0]}, Nome da Unidade: {unidade[1]}, CEP: {unidade[2]}")
 
     @staticmethod
-    def alterar(unidade_id, novo_nome, novo_endereco):
-        query = "UPDATE UnidadesEscolares SET NomeUnidade = %s, Endereco = %s WHERE ID = %s"
-        values = (novo_nome, novo_endereco, unidade_id)
+    def alterar(unidade_id, novo_nome, novo_cep):
+        query = "UPDATE UnidadesEscolares SET NomeUnidade = %s, Cep = %s WHERE ID = %s"
+        values = (novo_nome, novo_cep, unidade_id)
         cursor.execute(query, values)
         db.commit()
 
