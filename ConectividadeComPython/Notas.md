@@ -55,7 +55,7 @@
 ## Windows 
 ```
     git clone https://github.com/joaovtk/proz-course-database 
-    cd  proz-course-database\ConectividadeComPython
+    cd proz-course-database\ConectividadeComPython
     pip install -r requirements.txt
     python main.py
 ```
@@ -64,7 +64,18 @@
 
 ```
     git clone https://github.com/joaovtk/proz-course-database 
-    cd  proz-course-database/ConectividadeComPython
+    cd proz-course-database/ConectividadeComPython
     pip install -r requirements.txt
+    python main.py
+```
+
+### Alerta para alunos do curso 
+<p>Por causa de um erro do suporte tecnico o pip não está no path então você deve usar o seguinte codigo abaixo</p>
+<p>Comando apenas para usuario de windows e com a instalação padrão sem o path</p>
+
+```
+    git clone https://github.com/joaovtk/proz-course-database 
+    cd proz-course-database\ConectividadeComPython
+    C:\Users\Aluno\AppData\Local\Programs\Python\Python311\Scripts\pip install -r requirements.txt
     python main.py
 ```
