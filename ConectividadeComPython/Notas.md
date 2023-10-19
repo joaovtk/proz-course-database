@@ -3,6 +3,7 @@
 
 # Como executar
 <p>Primeiramente você deve executar o code.sql no seu workebench ou mysql command line</p>
+
 ``` 
     DROP DATABASE BDEscolar;
     CREATE DATABASE BDEscolar;
