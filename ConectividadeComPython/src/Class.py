@@ -1,4 +1,22 @@
 import mysql.connector
+import os 
+import platform
+import time
+
+def clear():
+    # limpando a tela usando o respectivo comando nos sistemas
+    if platform.system() == "Windows":
+        time.sleep(0.5)
+        os.system("cls")
+    elif platform.system() == "Linux":
+        time.sleep(0.5)
+        os.system("clear")
+
+def pause():
+    if platform.system() == "Windows":
+        os.system("pause")
+    elif platform.system() == "Linux":
+        os.system("read -rsp $'Press enter to continue...\n'")
 
 # Conectando ao banco de dados
 db = mysql.connector.connect(
@@ -10,7 +28,7 @@ db = mysql.connector.connect(
 )
 
 # Criando um cursor
-cursor = db.cursor()
+cursor = db.cursor(buffered=True)
 
 # Classe Aluno
 class Aluno:
@@ -20,20 +38,28 @@ class Aluno:
         self.turma_id = turma_id
 
     def salvar(self):
-        query = "INSERT INTO Alunos (Nome, DataNascimento, TurmaID) VALUES (%s, %s, %s)"
-        values = (self.nome, self.data_nascimento, self.turma_id)
-        cursor.execute(query, values)
-        db.commit()
+        sql = f"SELECT * FROM Turmas WHERE ID = {self.turma_id}"
+        data = cursor.execute(sql)
+        data = cursor.fetchall()
+        if not data:
+            print("Crie uma turma primeiro por favor")
+            pause()
+        else:
+            query = "INSERT INTO Alunos (Nome, DataNascimento, TurmaID) VALUES (%s, %s, %s)"
+            values = (self.nome, self.data_nascimento, self.turma_id)
+            cursor.execute(query, values)
+            db.commit()
+            print("Aluno cadastrado com sucesso!")
 
     @staticmethod
     def listar():
         query = "SELECT * FROM Alunos"
-        cursor.execute(query)
-        result = cursor.fetchall()
-        if not result:
+        data = cursor.execute(query)
+        data = cursor.fetchall()
+        if not data:
             print("Não há nenhum aluno cadastrado digite 1 para cadastrar um aluno")
         else:
-            for aluno in result:
+            for aluno in data:
                 print(f"ID: {aluno[0]}, Nome: {aluno[1]}, Data de Nascimento: {aluno[2]}, Turma ID: {aluno[3]}")
 
     @staticmethod
@@ -94,9 +120,18 @@ class Turma:
 
     def salvar(self):
         query = "INSERT INTO Turmas (NomeTurma, ProfessorID) VALUES (%s, %s)"
-        values = (self.nome_turma, self.professor_id)
-        cursor.execute(query, values)
-        db.commit()
+        sql = "SELECT * FROM Professores"
+        cursor.execute(sql)
+
+        data = cursor.fetchall()
+
+        if not data:
+            print("Crie um professor por favor")
+            pause()
+        else:
+            values = (self.nome_turma, self.professor_id)
+            cursor.execute(query, values)
+            db.commit()
 
     @staticmethod
     def listar():

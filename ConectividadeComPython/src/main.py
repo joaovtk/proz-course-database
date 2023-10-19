@@ -1,23 +1,5 @@
 # importação das classes
-from Class import (Aluno, Professor, UnidadeEscolar, Turma, Disciplina, cursor, db)
-import platform
-import time
-import os
-
-def clear():
-    # limpando a tela usando o respectivo comando nos sistemas
-    if platform.system() == "Windows":
-        time.sleep(0.5)
-        os.system("cls")
-    elif platform.system() == "Linux":
-        time.sleep(0.5)
-        os.system("clear")
-
-def pause():
-    if platform.system() == "Windows":
-        os.system("pause")
-    elif platform.system() == "Linux":
-        os.system("read -rsp $'Press enter to continue...\n'")
+from Class import (Aluno, Professor, UnidadeEscolar, Turma, Disciplina, cursor, db, pause, clear)
 
 if __name__ == "__main__":
     while True:
@@ -54,7 +36,6 @@ if __name__ == "__main__":
             turma_id = int(input("ID da Turma: "))
             aluno = Aluno(nome, data_nascimento, turma_id)
             aluno.salvar()
-            print("Aluno cadastrado com sucesso!")
 
         elif opcao == "2":
             Aluno.listar()
@@ -73,7 +54,7 @@ if __name__ == "__main__":
 
         elif opcao == "5":
             nome = input("Nome do Professor: ")
-            data = input("Data de nascimento: ") 
+            data = input("Data de Nascimento (YYYY-MM-DD): ") 
             cnpj = int(input("CNPJ: "))
             salario = float(input("Salario: "))
             professor = Professor(nome, cnpj, salario, data)
