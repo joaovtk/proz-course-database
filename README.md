@@ -3,6 +3,7 @@
 - [x] Aula sobre sql (pratica)<br>
 - [x] DML (pratica)<br/>
 - [x] Comecando o extra/AgendaContatos (extra)<br/>
+- [x] Conectando mysql com python (pratica)<br/>
 
 Obs cada dia é uma atividade
 
