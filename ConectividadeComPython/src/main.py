@@ -1,5 +1,5 @@
-# importação das classes
-from Class import (Aluno, Professor, UnidadeEscolar, Turma, Disciplina, cursor, db, pause, clear)
+# importação das classes e funçoes
+from src.__init__ import (Aluno, Professor, UnidadeEscolar, Turma, Disciplina, cursor, db, pause, clear)
 
 if __name__ == "__main__":
     while True:
