@@ -55,7 +55,7 @@
 ## Windows 
 ```
     git clone https://github.com/joaovtk/proz-course-database 
-    cd proz-course-database\ConectividadeComPython
+    cd proz-course-database\ConectividadeComPython\src
     pip install -r requirements.txt
     python main.py
 ```
@@ -64,7 +64,7 @@
 
 ```
     git clone https://github.com/joaovtk/proz-course-database 
-    cd proz-course-database/ConectividadeComPython
+    cd proz-course-database/ConectividadeComPython/src
     pip install -r requirements.txt
     python main.py
 ```
@@ -75,7 +75,7 @@
 
 ```
     git clone https://github.com/joaovtk/proz-course-database 
-    cd proz-course-database\ConectividadeComPython
+    cd proz-course-database\ConectividadeComPython/src
     C:\Users\Aluno\AppData\Local\Programs\Python\Python311\Scripts\pip install -r requirements.txt
     python main.py
 ```
