@@ -5,6 +5,7 @@
 - [x] Comecando o extra/AgendaContatos (extra)<br/>
 - [x] Conectando mysql com python (pratica)<br/>
 - [x] Prova do curso escrita
+- [x] Finalização do modulo 
 
 Obs cada dia é uma atividade
 
