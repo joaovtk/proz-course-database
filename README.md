@@ -4,6 +4,7 @@
 - [x] DML (pratica)<br/>
 - [x] Comecando o extra/AgendaContatos (extra)<br/>
 - [x] Conectando mysql com python (pratica)<br/>
+- [x] Prova do curso escrita
 
 Obs cada dia é uma atividade
 
